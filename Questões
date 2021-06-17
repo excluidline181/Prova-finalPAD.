@@ -1,0 +1,53 @@
+//Questão 1
+var result = someFun({somePoperty: 'interview'}, function(value){
+    console.log('this pointing to' + value);
+});
+console.log('result is', result);
+
+function someFun(a, b){
+    b(a.somePoperty);
+    return 1; 
+}
+
+// Questão 2
+var someFn = function(numero){
+
+    var somar = numero;
+    return function(incremento){
+        somar += incremento;
+        return somar; 
+    }
+}
+
+var counter = someFn(1);
+console.log('First Call', counter (3) );
+console.log('Second Call', counter(1));
+console.log('Third Call', counter (5));
+
+// Questão 3
+function calculator(n1, n2) {
+  return callback => callback(n1, n2)
+}
+
+// Questão 4
+var a = 5
+var b = 10
+
+if(a == 5){
+    let a = 4
+    var b = 1
+    console.log(a)
+    console.log(b)
+}
+console.log(a)
+console.log(b)
+
+// Questão 5
+
+function num(numero)
+{
+    for(var i = 1; i <= 10; ++i){
+        console.log(i * numero)
+    }
+}
+     num(2)
